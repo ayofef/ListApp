@@ -1,0 +1,3 @@
+const TOAST_TIMEOUT = 5000;
+
+export { TOAST_TIMEOUT };

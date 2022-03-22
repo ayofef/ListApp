@@ -1,0 +1,17 @@
+const STATUS_DICTIONARY = {
+  neverPublished: 'NEVER_PUBLISHED',
+  active: 'ACTIVE',
+  disabled: 'DISABLED',
+  needsConfig: 'NEEDS_CONFIG',
+  archived: 'ARCHIVED',
+};
+
+const PUBLISH_BUTTON_STATUSES = [
+  STATUS_DICTIONARY.neverPublished,
+  STATUS_DICTIONARY.disabled,
+  STATUS_DICTIONARY.archived,
+];
+
+const PUBLISHED_BUTTON_STATUSES = [STATUS_DICTIONARY.needsConfig, STATUS_DICTIONARY.active];
+
+export { PUBLISHED_BUTTON_STATUSES, PUBLISH_BUTTON_STATUSES, STATUS_DICTIONARY };

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: NeurialGrotesk;
+  font-weight: 600;
+  src: url(NeurialGrotesk-Bold.otf);
+}
+@font-face {
+  font-family: NeurialGrotesk;
+  font-weight: normal;
+  src: url(NeurialGrotesk-Regular.otf);
+}
+@font-face {
+  font-family: NeurialGrotesk;
+  font-weight: 500;
+  src: url(NeurialGrotesk-Medium.otf);
+}

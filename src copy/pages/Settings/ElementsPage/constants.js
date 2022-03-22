@@ -1,0 +1,97 @@
+import {
+  BrandCenter,
+  Emails,
+  Checkout,
+  Forms,
+  Popups,
+  Pages,
+  Translate,
+  Receipt,
+  Phone,
+  Window,
+  PushMessage,
+} from '../../../assets/icons/Elements';
+
+export const ELEMENTS_SECTIONS = [
+  {
+    title: 'Brand center',
+    Icon: BrandCenter,
+    description: 'Configure your companies brand. Add your logo, color scheme, social media and more.',
+    action: 'Edit brand',
+    isActive: true,
+    subRoute: '/brand-center',
+  },
+  {
+    title: 'Emails',
+    Icon: Emails,
+    description: 'Setup emails templates, setup a custom SMTP server, or configure your domain.',
+    action: 'Edit emails',
+    isActive: true,
+    subRoute: '/emails',
+  },
+  {
+    title: 'Checkout',
+    Icon: Checkout,
+    description: 'Configure WhenThen checkout.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Forms',
+    Icon: Forms,
+    description: 'Configure dynamic and hosted forms.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Receipts',
+    Icon: Receipt,
+    description: 'Configure payment receipts.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Invoices',
+    Icon: Pages,
+    description: 'Configure customer invoices.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'PayLink page',
+    Icon: Window,
+    description: "Create a unique payment's collection page.",
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Pop-up',
+    Icon: Popups,
+    description: 'Create page pop-ups based on transaction triggers.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Text message',
+    Icon: Phone,
+    description: 'Configure text messages to send to your customers.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Push message',
+    Icon: PushMessage,
+    description: 'Configure push notifications to send to your customers.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+  {
+    title: 'Bots',
+    Icon: Translate,
+    description: 'Configure the WhenThen bot.',
+    action: 'Coming soon',
+    isActive: false,
+  },
+];
+
+export const ELEMENTS_SECTIONS_COLUMNS_COUNT = 3;

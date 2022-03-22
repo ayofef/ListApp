@@ -1,0 +1,14 @@
+.intercom-launcher-frame,
+.intercom-lightweight-app-launcher.intercom-launcher {
+  visibility: hidden;
+}
+
+.intercom-lightweight-app .intercom-lightweight-app-messenger.intercom-messenger,
+.intercom-namespace .intercom-app .intercom-messenger-frame {
+  bottom: 16px;
+  height: 688px !important;
+}
+
+.intercom-launcher-badge-frame {
+  display: none !important;
+}

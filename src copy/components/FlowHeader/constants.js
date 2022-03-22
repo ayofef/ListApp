@@ -1,0 +1,4 @@
+import { STATUSES } from '../../constants/flows';
+
+export const DRAFT_FLOW_STATUS = new Set([STATUSES.NEVER_PUBLISHED, STATUSES.DISABLED, STATUSES.ARCHIVED]);
+export const LIVE_FLOW_STATUS = new Set([STATUSES.ACTIVE, STATUSES.NEEDS_CONFIG]);

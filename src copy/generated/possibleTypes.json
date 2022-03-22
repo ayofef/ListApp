@@ -1,0 +1,54 @@
+{
+  "Node": [
+    "PaymentInternal",
+    "Transaction"
+  ],
+  "UiAction": [
+    "RouteUiAction",
+    "GraphQLUiAction"
+  ],
+  "FundingSource": [
+    "AchFundingSource",
+    "CardFundingSource",
+    "IbanFundingSource"
+  ],
+  "PowerUpStep": [
+    "InformationalPowerUpStep",
+    "ChooseConnectionsPowerUpStep",
+    "RouteUiActionPowerUpStep"
+  ],
+  "CoreObject": [
+    "VCN",
+    "Transaction"
+  ],
+  "FlowStep": [
+    "CompositeFlowStep",
+    "WebhookActionStep",
+    "OptimisePaymentMethods",
+    "WaitForEventStep",
+    "DelayActionStep",
+    "WebhookTriggerStep",
+    "CountConditionStep",
+    "ConnectionEventTriggerStep",
+    "ValueConditionStep",
+    "FindLinkedDataStep",
+    "DataLookupStep",
+    "DataExportStep",
+    "IfElseStep",
+    "PaymentProcessingTrigger",
+    "DataEventTriggerStep",
+    "WaitOnOutputsStep",
+    "WaitForScheduledTimeStep",
+    "DataConnectionActionStep",
+    "SetVariableStep",
+    "DataActionStep",
+    "ThreeDsStep",
+    "DataConditionStep",
+    "RunFlowStep",
+    "ScheduledTriggerStep",
+    "CheckoutFormStep",
+    "UserActionStep",
+    "ChangeOwnerStep",
+    "RouteWithinFlowStep"
+  ]
+}
