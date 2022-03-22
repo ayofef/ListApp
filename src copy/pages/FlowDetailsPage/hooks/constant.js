@@ -1,5 +1,0 @@
-const TOAST_TIMEOUT = 5000;
-const TOAST_TITLE = 'Flow Details';
-const PAYMENT_PROCESSING_BASE_TEMPLATE = 'template.payment-processing-base';
-
-export { TOAST_TIMEOUT, TOAST_TITLE, PAYMENT_PROCESSING_BASE_TEMPLATE };
