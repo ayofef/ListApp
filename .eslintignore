@@ -1,0 +1,6 @@
+automated-testing/*
+*.config.js
+cypress/*
+vendor/*
+generate-possible-types.js
+node_modules/*
