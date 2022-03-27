@@ -14,4 +14,6 @@ const SignUpSchema = Yup.object().shape({
 
 const FIELD_PROPS = { name: FIELDS.email, type: 'email', label: 'Email', placeholder: 'you@email.com' };
 
-export { INITIAL_VALUES, FIELD_PROPS, SignUpSchema };
+const generateLabel = (isSignInAuthType) => `Email a Sign ${isSignInAuthType ? 'in' : 'up'} Link`;
+
+export { INITIAL_VALUES, FIELD_PROPS, SignUpSchema, generateLabel };

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { StyledMain, StyledWrapper, StyledFooter } from './styled';
 import Header from './Header';
+import ErrorBoundary from '../../ErrorBoundary';
 
 function Layout({ children }) {
   const date = new Date();
@@ -11,7 +12,9 @@ function Layout({ children }) {
     <>
       <Header />
       <StyledMain>
-        <StyledWrapper>{children}</StyledWrapper>
+        <StyledWrapper>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </StyledWrapper>
       </StyledMain>
       <StyledFooter>List App &copy; {year}</StyledFooter>
     </>

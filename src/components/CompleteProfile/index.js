@@ -31,13 +31,17 @@ function CompleteProfile() {
         ...generateNewProject(user.id),
       };
 
+      // Update profile with new name
       const { data, profileError } = await supabase.from(DB_PROFILES_KEY).upsert(updatedProfileObj);
+      // create new project for first time user
       const { error: projectError } = await supabase.from(DB_PROJECTS_KEY).upsert(projectObj, {
         returning: 'minimal',
       });
+      // update user metadata
       const { error: updateMetadataError } = await supabase.auth.api.updateUserById(user.id, {
         user_metadata: { hasCompletedProfile: true },
       });
+      // refresh session to get the latest user metadata
       const { error: refreshSessionError } = await supabase.auth.refreshSession();
 
       const { errorMessage, hasError } = getErrorMessage([

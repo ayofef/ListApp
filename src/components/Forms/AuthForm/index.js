@@ -6,11 +6,9 @@ import Box from '@material-ui/core/Box';
 import FormInput from '../FormInput';
 import { StyledAuthForm } from './styled';
 import SubmitButton from '../SubmitButton';
-import { INITIAL_VALUES, FIELD_PROPS, SignUpSchema } from './constant';
+import { INITIAL_VALUES, FIELD_PROPS, SignUpSchema, generateLabel } from './constant';
 import IconButton from '../../atoms/IconButton';
 import { P16 } from '../../atoms/P16';
-
-const generateLabel = (isSignInAuthType) => `Email a Sign ${isSignInAuthType ? 'in' : 'up'} Link`;
 
 function AuthForm({ loading, handleSubmit, toggleAuthType, isSignInAuthType }) {
   const submitLabel = generateLabel(isSignInAuthType);

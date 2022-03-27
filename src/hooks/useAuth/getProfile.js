@@ -1,7 +1,7 @@
-import isEmpty from 'lodash/isEmpty';
 import { supabase } from '../../client/supabaseClient';
 import { handleToast, TOAST_TYPES } from '../../constants/toast';
 import { DB_PROFILES_KEY } from '../../constants/profile';
+import { getErrorMessage } from '../../utils/getErrorMessage';
 
 export const getProfile = async ({ setLoading, setProfile }) => {
   try {
@@ -15,8 +15,9 @@ export const getProfile = async ({ setLoading, setProfile }) => {
       .eq('id', user.id)
       .single();
 
-    if (!isEmpty(error)) {
-      handleToast(TOAST_TYPES.error, error.error_description);
+    const { hasError, errorMessage } = getErrorMessage([error]);
+    if (hasError) {
+      handleToast(TOAST_TYPES.error, errorMessage);
       return;
     }
 

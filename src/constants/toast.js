@@ -14,7 +14,6 @@ const handleToast = (type, message) =>
     closeOnClick: true,
     pauseOnHover: false,
     draggable: false,
-    // progress: undefined,
   });
 
 export { handleToast, TOAST_TYPES };

@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
-import isEmpty from 'lodash/isEmpty';
 import { supabase } from '../../client/supabaseClient';
 import AuthForm from '../Forms/AuthForm';
 import FormContainer from '../Forms/FormContainer';
 import { handleToast, TOAST_TYPES } from '../../constants/toast';
-
-const generateAuthHeaderLabel = (isSignInAuthType) => `Sign ${isSignInAuthType ? 'in' : 'up'} to your account`;
+import { getErrorMessage } from '../../utils/getErrorMessage';
+import { generateAuthHeaderLabel } from './constant';
 
 function Auth() {
   const [loading, setLoading] = useState(false);
   const [isSignInAuthType, setIsSignInAuthType] = useState(true);
   const toggleAuthType = () => setIsSignInAuthType((prevState) => !prevState);
 
-  //convert error toast to inline
-
   const handleAuth = async (values, actions) => {
     try {
       setLoading(true);
       const { error } = await supabase.auth.signIn({ email: values.email });
 
-      if (!isEmpty(error)) {
-        handleToast(TOAST_TYPES.error, error.error_description);
+      const { hasError, errorMessage } = getErrorMessage([error]);
+      if (hasError) {
+        handleToast(TOAST_TYPES.error, errorMessage);
         return;
       }
 

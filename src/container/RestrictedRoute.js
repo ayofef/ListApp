@@ -8,9 +8,6 @@ import TodoApp from '../components/TaskApp';
 function RestrictedRoute() {
   const { hasCompletedProfile } = useGlobalContext();
 
-  /**
-   * TDOD: handle loading state for get profile
-   */
   return (
     <Switch>
       <Route path="/complete-profile" exact>

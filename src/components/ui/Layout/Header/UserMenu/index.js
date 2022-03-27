@@ -20,7 +20,6 @@ function UserMenu() {
   const options = [
     {
       label: profile.username,
-      value: 'profile',
       onClick: noop,
       disabled: true,
     },
