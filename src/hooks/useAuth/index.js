@@ -11,6 +11,7 @@ const useAuth = () => {
   const { push } = useHistory();
 
   const isAuthenticated = !!session;
+  const hasCompletedProfile = session?.user.user_metadata.hasCompletedProfile;
 
   useEffect(() => {
     setSession(supabase.auth.session());
@@ -21,12 +22,10 @@ const useAuth = () => {
   }, []);
 
   useEffect(() => {
-    if (session) {
+    if (hasCompletedProfile) {
       getProfile({ setLoading: setGlobalLoading, setProfile });
     }
-  }, [session]);
-
-  const hasCompletedProfile = session?.user.user_metadata.hasCompletedProfile;
+  }, [hasCompletedProfile]);
 
   const signOut = async () => {
     await supabase.auth.signOut();
