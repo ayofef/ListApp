@@ -2,7 +2,7 @@
 
  [Live here](https://github.com/facebook/create-react-app).
  
- Database -  [Supabase]https://supabase.com/
+ Database -  [Supabase](https://supabase.com/)
 
 ## Available Scripts
 
