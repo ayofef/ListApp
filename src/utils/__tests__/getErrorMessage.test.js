@@ -54,4 +54,18 @@ describe('getErrorMessage', () => {
       errorMessage: 'error_description',
     });
   });
+
+  it('should return hasError as true and errorMessage if errors is defined and message is defined', () => {
+    const errors = [
+      {
+        message: 'error',
+      },
+    ];
+    const result = getErrorMessage(errors);
+
+    expect(result).toMatchObject({
+      hasError: true,
+      errorMessage: 'error',
+    });
+  });
 });

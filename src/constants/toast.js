@@ -7,7 +7,7 @@ const TOAST_TYPES = {
 };
 
 const handleToast = (type, message) =>
-  toast.success(message, {
+  toast[type](message, {
     position: 'top-right',
     autoClose: TOAST_TIMEOUT,
     hideProgressBar: false,

@@ -16,8 +16,13 @@ export const getErrorMessage = (errors) => {
       errorMessage: '',
     };
   }
-  const hasError = errors.some((error) => isDefined(error?.error_description));
-  const errorMessage = errors.find((error) => isDefined(error?.error_description))?.error_description || '';
+
+  const errorFn = (error) => isDefined(error?.error_description) || isDefined(error?.message);
+
+  const hasError = errors.some(errorFn);
+  const errorMessageObject = errors.find(errorFn);
+
+  const errorMessage = errorMessageObject?.error_description || errorMessageObject?.message || '';
 
   return { hasError, errorMessage };
 };

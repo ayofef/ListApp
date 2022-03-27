@@ -15,17 +15,17 @@ export const updateProjects = async ({ projects, setProjects, newProject, operat
     let localProjects = projects.slice();
 
     if (operationType === UPDATE_PROJECT_OPREATION_KEYS.add) {
-      const { error: errorMessage } = await supabase.from(DB_PROJECTS_KEY).upsert(newProject, {
+      const { error: errorObj } = await supabase.from(DB_PROJECTS_KEY).upsert(newProject, {
         returning: 'minimal',
       });
-      error = errorMessage;
+      error = errorObj;
 
       localProjects.push(newProject);
     }
 
     if (operationType === UPDATE_PROJECT_OPREATION_KEYS.delete) {
-      const { error: errorMessage } = await supabase.from(DB_PROJECTS_KEY).delete().match({ id });
-      error = errorMessage;
+      const { error: errorObj } = await supabase.from(DB_PROJECTS_KEY).delete().match({ id });
+      error = errorObj;
 
       const updatedProjects = projects.filter((project) => project.id !== id);
       localProjects = updatedProjects;
