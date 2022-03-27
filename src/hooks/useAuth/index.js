@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { supabase } from '../../client/supabaseClient';
 import { getProfile } from './getProfile';
 import { deleteAccount } from './deleteAccount';
-import { isDefined } from '../../utils/isDefined';
 
 const useAuth = () => {
   const [session, setSession] = useState(null);
@@ -13,6 +12,7 @@ const useAuth = () => {
   const { push } = useHistory();
 
   const isAuthenticated = !!session;
+  const hasCompletedProfile = session?.user.user_metadata.hasCompletedProfile;
 
   useEffect(() => {
     setSession(supabase.auth.session());
@@ -23,12 +23,10 @@ const useAuth = () => {
   }, []);
 
   useEffect(() => {
-    if (isDefined(session)) {
+    if (hasCompletedProfile) {
       getProfile({ setLoading: setGlobalLoading, setProfile });
     }
-  }, [session]);
-
-  const hasCompletedProfile = session?.user.user_metadata.hasCompletedProfile;
+  }, [hasCompletedProfile]);
 
   const signOut = async () => {
     await supabase.auth.signOut();
