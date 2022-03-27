@@ -3,11 +3,13 @@ import { useHistory } from 'react-router-dom';
 import { supabase } from '../../client/supabaseClient';
 import { getProfile } from './getProfile';
 import { deleteAccount } from './deleteAccount';
+import { isDefined } from '../../utils/isDefined';
 
 const useAuth = () => {
   const [session, setSession] = useState(null);
   const [profile, setProfile] = useState({});
   const [globalLoading, setGlobalLoading] = useState(false);
+
   const { push } = useHistory();
 
   const isAuthenticated = !!session;
@@ -21,7 +23,7 @@ const useAuth = () => {
   }, []);
 
   useEffect(() => {
-    if (session) {
+    if (isDefined(session)) {
       getProfile({ setLoading: setGlobalLoading, setProfile });
     }
   }, [session]);

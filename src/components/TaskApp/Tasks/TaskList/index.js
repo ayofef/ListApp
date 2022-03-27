@@ -7,7 +7,7 @@ import EditableField from '../EditableField';
 import PlusButton from '../../../atoms/IconButton';
 import { useTodoEvents } from './useTodoEvents';
 
-// using recursion technique to render subtasks
+// using recursive technique to render subtasks
 function TaskList({ tasks, parentId, projectData, handleUpdateProject }) {
   const { handleTaskUpdate, handleAddNewTask, handleMarkAsComplete } = useTodoEvents({
     parentId,

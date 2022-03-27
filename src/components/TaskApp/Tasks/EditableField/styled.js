@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Input from '../../../atoms/Input';
+import THEME from '../../../../constants/theme';
 
 const StyledEditableField = styled(Input)`
   & .MuiInputBase-root {
@@ -42,7 +43,7 @@ const StyledEditableCheckBoxWrapper = styled.div`
   transition: all 0.3s ease-out;
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: ${THEME.greyColors.grey1};
   }
 `;
 

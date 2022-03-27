@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { getProjects } from './getProjects';
 import { updateProject } from './updateProject';
-import { updateProjects, UPDATE_PROJECT_OPREATION_KEYS } from './updateProjects';
+import { updateProjects, UPDATE_PROJECT_OPERATION_KEYS } from './updateProjects';
 
 const useTasks = () => {
   const [projects, setProjects] = useState([]);
@@ -24,7 +24,7 @@ const useTasks = () => {
         projects,
         setProjects,
         newProject,
-        operationType: UPDATE_PROJECT_OPREATION_KEYS.add,
+        operationType: UPDATE_PROJECT_OPERATION_KEYS.add,
         setLoading,
       });
     },
@@ -37,7 +37,7 @@ const useTasks = () => {
         projects,
         setProjects,
         id,
-        operationType: UPDATE_PROJECT_OPREATION_KEYS.delete,
+        operationType: UPDATE_PROJECT_OPERATION_KEYS.delete,
         setLoading,
       });
     },
