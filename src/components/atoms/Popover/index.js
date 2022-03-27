@@ -19,7 +19,7 @@ function Popover({ open, anchorEl, handleClose, width, options }) {
     >
       {options?.map((option) => (
         <StyledListItem
-          key={option?.label}
+          key={option?.key}
           $disabled={Boolean(option?.disabled)}
           onClick={option?.onClick}
           disableRipple

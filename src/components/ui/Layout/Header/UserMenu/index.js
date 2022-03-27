@@ -22,15 +22,18 @@ function UserMenu() {
       label: profile.username,
       onClick: noop,
       disabled: true,
+      key: 'username',
     },
     {
       label: 'Sign out',
       onClick: signOut,
+      key: 'sign-out',
     },
     {
       label: 'Delete Account',
       onClick: handleDelete,
       dangerItem: true,
+      key: 'delete-account',
     },
   ];
 

@@ -43,6 +43,7 @@ function SideBarItem({ id, title }) {
       label: 'Delete',
       onClick: handleDelete,
       dangerItem: true,
+      key: 'delete',
     },
   ];
 
