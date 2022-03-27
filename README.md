@@ -1,6 +1,6 @@
 # List App
 
- [Live here](https://github.com/facebook/create-react-app).
+ [Live here](https://ayofef-list-app.netlify.app).
  
  Database -  [Supabase](https://supabase.com/)
 
