@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import THEME from '../../../constants/theme';
 
 export const StyledFormWrapper = styled.div`
   width: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid ${THEME.greyColors.grey2};
   border-radius: 8px;
 
   margin: 0 auto;

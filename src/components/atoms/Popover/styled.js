@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Popover from '@material-ui/core/Popover/Popover';
+import Popover from '@material-ui/core/Popover';
 import THEME from '../../../constants/theme';
 
 const StyledPopover = styled(Popover)`

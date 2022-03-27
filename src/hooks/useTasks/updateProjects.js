@@ -3,7 +3,7 @@ import { supabase } from '../../client/supabaseClient';
 import { handleToast, TOAST_TYPES } from '../../constants/toast';
 import { DB_PROJECTS_KEY } from '../../constants/task';
 
-export const UPDATE_PROJECT_OPREATION_KEYS = {
+export const UPDATE_PROJECT_OPERATION_KEYS = {
   add: 'add',
   delete: 'delete',
 };
@@ -14,7 +14,7 @@ export const updateProjects = async ({ projects, setProjects, newProject, operat
     let error = null;
     let localProjects = projects.slice();
 
-    if (operationType === UPDATE_PROJECT_OPREATION_KEYS.add) {
+    if (operationType === UPDATE_PROJECT_OPERATION_KEYS.add) {
       const { error: errorObj } = await supabase.from(DB_PROJECTS_KEY).upsert(newProject, {
         returning: 'minimal',
       });
@@ -23,7 +23,7 @@ export const updateProjects = async ({ projects, setProjects, newProject, operat
       localProjects.push(newProject);
     }
 
-    if (operationType === UPDATE_PROJECT_OPREATION_KEYS.delete) {
+    if (operationType === UPDATE_PROJECT_OPERATION_KEYS.delete) {
       const { error: errorObj } = await supabase.from(DB_PROJECTS_KEY).delete().match({ id });
       error = errorObj;
 

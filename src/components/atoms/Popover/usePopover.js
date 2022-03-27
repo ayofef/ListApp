@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const usePopover = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+
   const handleOpen = ({ currentTarget }) => {
     return setAnchorEl(currentTarget);
   };

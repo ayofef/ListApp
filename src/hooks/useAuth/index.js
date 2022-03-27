@@ -8,6 +8,7 @@ const useAuth = () => {
   const [session, setSession] = useState(null);
   const [profile, setProfile] = useState({});
   const [globalLoading, setGlobalLoading] = useState(false);
+
   const { push } = useHistory();
 
   const isAuthenticated = !!session;
