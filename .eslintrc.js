@@ -8,7 +8,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  // parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   extends: ['airbnb', 'plugin:jsx-a11y/recommended', 'eslint-config-prettier', 'prettier'],
   plugins: [
     'react',
