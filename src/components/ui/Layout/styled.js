@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
   width: 100%;
 
   padding: 40px 16px;
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 150px);
 
   @media screen and (max-width: 700px) {
     padding: 20px 16px;
