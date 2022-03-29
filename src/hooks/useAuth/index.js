@@ -17,10 +17,14 @@ const useAuth = () => {
   useEffect(() => {
     setSession(supabase.auth.session());
 
-    supabase.auth.onAuthStateChange((_event, _session) => {
+    const { data: authListener } = supabase.auth.onAuthStateChange((_event, _session) => {
       setSession(_session);
     });
-  }, []);
+
+    return () => {
+      authListener?.unsubscribe();
+  };
+  }, [session]);
 
   useEffect(() => {
     if (hasCompletedProfile) {
