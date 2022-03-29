@@ -23,7 +23,7 @@ const useAuth = () => {
 
     return () => {
       authListener?.unsubscribe();
-  };
+    };
   }, [session]);
 
   useEffect(() => {
