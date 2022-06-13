@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx src --max-warnings=25",
-    "lint:fix": "eslint --fix --ext .js,.jsx src"
+    "lint:fix": "eslint --fix --ext .js,.jsx src",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "babel-eslint": "^10.1.0",
+    "cypress": "^10.1.0",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",

@@ -2,6 +2,9 @@ import ButtonBase from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
 
 const Button = withStyles({
+  overrides: {
+    disableRipple: true,
+  },
   root: {
     borderRadius: '10px',
     padding: ({ padding }) => padding,
