@@ -25,21 +25,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
-          group: 'Setup job'
+          id: 'setup-job'
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 16.16.0
           cache: yarn
-          group: 'Setup job'
+          id: 'setup-job'
           
       - name: Install dependencies
         run: yarn
-        id: 'Setup job'
+        id: 'setup-job'
 
       - name: Lint Job
         run: yarn run lint
-        id: 'Lint test'
+        id: 'lint-job'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
