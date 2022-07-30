@@ -29,7 +29,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx src --max-warnings=25",
-    "lint:fix": "eslint --fix --ext .js,.jsx src"
+    "lint:fix": "eslint --fix --ext .js,.jsx src",
+    "prettier": "prettier './**/*.{js,ts,jsx,tsx,md,html,css,scss}' --write",
+    "prettier:check": "prettier './**/*.{js,ts,jsx,tsx,md,html,css,scss}' --check",
   },
   "eslintConfig": {
     "extends": [
